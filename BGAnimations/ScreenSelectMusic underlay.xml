@@ -1,5 +1,5 @@
 <ActorFrame><children>
-	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Common fallback background' )"
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Menu fallback background' )"
 		OnCommand="%function(self)
 		self:x(SCREEN_CENTER_X)
 		self:y(SCREEN_CENTER_Y)

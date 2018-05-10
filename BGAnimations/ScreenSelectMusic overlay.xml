@@ -7,7 +7,7 @@
     end"
     ><children>
 
-	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Common fallback background' )"
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Menu fallback background' )"
 		OnCommand="%function(self)
 		self:x(SCREEN_CENTER_X)
 		self:y(SCREEN_CENTER_Y)
@@ -18,7 +18,7 @@
 		end"
 		/>
 
-	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Common fallback background' )"
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Menu fallback background' )"
 		OnCommand="%function(self)
 		self:x(SCREEN_CENTER_X)
 		self:y(SCREEN_CENTER_Y)
@@ -42,9 +42,37 @@
 		
 			<Layer File="@THEME:GetPath( EC_GRAPHICS, '','BannerFrame' )"/>
 
+			<Layer File="@THEME:GetPath( EC_GRAPHICS, 'ScreenSelectMusic','difficulty icons' )"
+				OnCommand="animate,0;setstate,1;y,160;x,-50"
+				/>
+
+			<Layer File="@THEME:GetPath( EC_GRAPHICS, 'ScreenSelectMusic','difficulty icons' )"
+				OnCommand="animate,0;setstate,2;y,125;x,-72"
+				/>
+
+			<Layer File="@THEME:GetPath( EC_GRAPHICS, 'ScreenSelectMusic','difficulty icons' )"
+				OnCommand="animate,0;setstate,3;y,90;x,-53"
+				/>
+
+			<Layer Font="_arial 30px" Text="Jumps"
+				InitCommand="x,0;y,186"
+				OnCommand="shadowlength,0;diffuse,0,0,0,1;skewx,-0.3;zoom,0.5;" />
+
+			<Layer Font="_arial 30px" Text="Skills"
+				InitCommand="x,60;y,186"
+				OnCommand="shadowlength,0;diffuse,0,0,0,1;skewx,-0.3;zoom,0.5;" />
+
+			<Layer Font="_arial 30px" Text="Insanity"
+				InitCommand="x,115;y,186"
+				OnCommand="shadowlength,0;diffuse,0,0,0,1;skewx,-0.3;zoom,0.5;" />
+
+			<Layer Font="_arial 30px" Text="Density"
+				InitCommand="x,180;y,186"
+				OnCommand="shadowlength,0;diffuse,0,0,0,1;skewx,-0.3;zoom,0.5;" />
+
 			<Layer Font="_arial 30px" Text="Beats / Minute"
 				InitCommand="x,-125;y,36"
-				OnCommand="shadowlength,0;diffuse,0,0,0,1;skewx,-0.3;zoom,0.5;horizalign,left" />
+				OnCommand="shadowlength,0;diffuse,0,0,0,1;skewx,-0.3;zoom,0.58;horizalign,left" />
 	</children></Layer>
 
 	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','shared menu header' )"
