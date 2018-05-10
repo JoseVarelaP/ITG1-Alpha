@@ -7,7 +7,7 @@
     end"
     ><children>
 
-	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Menu fallback background' )"
+	<Layer File="@ThemeFile('Menu fallback background')"
 		OnCommand="%function(self)
 		self:x(SCREEN_CENTER_X)
 		self:y(SCREEN_CENTER_Y)
@@ -18,7 +18,7 @@
 		end"
 		/>
 
-	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Menu fallback background' )"
+	<Layer File="@ThemeFile('Menu fallback background')"
 		OnCommand="%function(self)
 		self:x(SCREEN_CENTER_X)
 		self:y(SCREEN_CENTER_Y)
@@ -32,7 +32,7 @@
 
        <Layer Type="ActorFrame" OnCommand="y,SCREEN_CENTER_Y+37;x,SCREEN_CENTER_X+88"><children>
 		
-			<Layer File="@THEME:GetPath( EC_GRAPHICS, '','BannerFrame' )"/>
+			<Layer File="@ThemeFile('BannerFrame')"/>
 
 			<Layer File="@THEME:GetPath( EC_GRAPHICS, 'ScreenSelectMusic','difficulty icons' )"
 				OnCommand="animate,0;setstate,1;y,160;x,-50"
@@ -67,11 +67,11 @@
 				OnCommand="shadowlength,0;diffuse,0,0,0,1;skewx,-0.3;zoom,0.58;horizalign,left" />
 	</children></Layer>
 
-	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','shared menu header' )"
+	<Layer File="@ThemeFile('shared menu header')"
         OnCommand="x,SCREEN_RIGHT;horizalign,right;vertalign,top;zoom,1.8;cropleft,0.5"
         />
 
-	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','shared menu header' )"
+	<Layer File="@ThemeFile('shared menu header')"
         OnCommand="horizalign,left;vertalign,top;zoom,1.8"
         />
 

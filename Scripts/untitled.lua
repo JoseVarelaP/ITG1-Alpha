@@ -1,14 +1,18 @@
 function ThemeFile( file ) return THEME:GetPath( EC_GRAPHICS, '' , file ) end
-function DWI_LoadBanner(self)
-	if GAMESTATE:GetCurrentSong() then
-        if GAMESTATE:GetCurrentSong():GetBannerPath() then
-            self:hidden(0)
-            self:scaletoclipped(254*1.8,79*1.8);
-            self:LoadBanner(GAMESTATE:GetCurrentSong():GetBannerPath());
+
+function LifebarDoublesCheck(pn)
+    if pn == PLAYER_1 then
+        if GAMESTATE:PlayerUsingBothSides() then
+            return SCREEN_CENTER_X
         else
-            self:LoadBanner(ThemeFile('Common fallback banner'))
+            return SCREEN_CENTER_X-150
         end
-    else
-        self:LoadBanner(ThemeFile('Common fallback banner'))
+    end
+    if pn == PLAYER_2 then
+        if GAMESTATE:PlayerUsingBothSides() then
+            return SCREEN_CENTER_X
+        else
+            return SCREEN_CENTER_X+150
+        end
     end
 end
