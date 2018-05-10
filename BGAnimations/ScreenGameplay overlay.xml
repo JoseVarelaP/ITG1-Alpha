@@ -1,0 +1,9 @@
+<ActorFrame><children>
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, 'ScreenGameplay','score frame' )"
+		OnCommand="x,SCREEN_CENTER_X-155;y,SCREEN_BOTTOM-40"
+		/>
+
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, 'ScreenGameplay','score frame' )"
+		OnCommand="x,SCREEN_CENTER_X+155;y,SCREEN_BOTTOM-40"
+		/>
+</children></ActorFrame>
