@@ -1,0 +1,12 @@
+<ActorFrame>
+	<children>
+		<Actor
+			Type="Quad"
+			OnCommand="x,SCREEN_CENTER_X;y,SCREEN_CENTER_Y;zoomto,SCREEN_WIDTH+3,SCREEN_HEIGHT;diffuse,0,0,0,1"
+		/>
+		<Layer
+				File="@'../Graphics/ScreenGameplay stage '..GetStageText()"
+				OnCommand="x,SCREEN_CENTER_X;y,SCREEN_BOTTOM-40;diffusealpha,0;sleep,0.5;diffusealpha,1;sleep,1"
+			/>
+	</children>
+</ActorFrame>
