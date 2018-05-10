@@ -1,0 +1,3 @@
+<ActorFrame><children>
+	<Layer File="BannerFrame" OnCommand="y,55;x,-36" />
+</children></ActorFrame>

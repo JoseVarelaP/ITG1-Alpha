@@ -1,0 +1,58 @@
+<ActorFrame
+    CurrentSongChangedMessageCommand="sleep,0.01;queuecommand,SendUpdate"
+    CurrentStepsP1ChangedMessageCommand="sleep,0.01;queuecommand,SendUpdate"
+    CurrentStepsP2ChangedMessageCommand="sleep,0.01;queuecommand,SendUpdate"
+    SendUpdateCommand="%function(self)
+    MESSAGEMAN:Broadcast('Update')
+    end"
+    ><children>
+
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Common fallback background' )"
+		OnCommand="%function(self)
+		self:x(SCREEN_CENTER_X)
+		self:y(SCREEN_CENTER_Y)
+		self:zoom(1)
+		self:croptop(0.8)
+		self:fadetop(0.1)
+		self:cropright(0.48)
+		end"
+		/>
+
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','Common fallback background' )"
+		OnCommand="%function(self)
+		self:x(SCREEN_CENTER_X)
+		self:y(SCREEN_CENTER_Y)
+		self:zoom(1)
+		self:cropbottom(0.8)
+		self:fadebottom(0.1)
+		end"
+		/>
+
+
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','BannerMask' )"
+        OnCommand="x,SCREEN_CENTER_X+88;y,SCREEN_CENTER_Y+65.5;zoom,1.2;z,-10;zwrite,1;blend,noeffect"
+        />
+
+	<Layer File="songbanner"
+        OnCommand="x,SCREEN_CENTER_X+120;y,SCREEN_CENTER_Y-100;z,-10;ztest,1;"
+        UpdateMessageCommand="%function(self) DWI_LoadBanner(self) end"
+        />
+
+       <Layer Type="ActorFrame" OnCommand="y,SCREEN_CENTER_Y+37;x,SCREEN_CENTER_X+88"><children>
+		
+			<Layer File="@THEME:GetPath( EC_GRAPHICS, '','BannerFrame' )"/>
+
+			<Layer Font="_arial 30px" Text="Beats / Minute"
+				InitCommand="x,-125;y,36"
+				OnCommand="shadowlength,0;diffuse,0,0,0,1;skewx,-0.3;zoom,0.5;horizalign,left" />
+	</children></Layer>
+
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','shared menu header' )"
+        OnCommand="x,SCREEN_RIGHT;horizalign,right;vertalign,top;zoom,1.8;cropleft,0.5"
+        />
+
+	<Layer File="@THEME:GetPath( EC_GRAPHICS, '','shared menu header' )"
+        OnCommand="horizalign,left;vertalign,top;zoom,1.8"
+        />
+
+</children></ActorFrame>
