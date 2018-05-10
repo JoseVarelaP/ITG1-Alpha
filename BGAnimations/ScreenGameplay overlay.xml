@@ -1,9 +1,11 @@
 <ActorFrame><children>
 	<Layer File="@THEME:GetPath( EC_GRAPHICS, 'ScreenGameplay','score frame' )"
-		OnCommand="x,SCREEN_CENTER_X-155;y,SCREEN_BOTTOM-40"
+		Condition="GAMESTATE:IsPlayerEnabled(PLAYER_1)"
+		OnCommand="x,SCREEN_CENTER_X-170;y,SCREEN_BOTTOM-40"
 		/>
 
 	<Layer File="@THEME:GetPath( EC_GRAPHICS, 'ScreenGameplay','score frame' )"
-		OnCommand="x,SCREEN_CENTER_X+155;y,SCREEN_BOTTOM-40"
+		Condition="GAMESTATE:IsPlayerEnabled(PLAYER_2)"
+		OnCommand="x,SCREEN_CENTER_X+170;y,SCREEN_BOTTOM-40"
 		/>
 </children></ActorFrame>
