@@ -1,13 +1,11 @@
 <ActorFrame><children>
-<Layer File="@ThemeFile('marquee')"
-		OnCommand="%function(self)
-		self:x(SCREEN_CENTER_X)
-		self:y(SCREEN_CENTER_Y)
-		self:zoomto(SCREEN_WIDTH+3,SCREEN_HEIGHT)
-		end"
-		/>
+<Layer File="ScreenLogo background" />
 
-		<Layer Font="_krungthep 20px" Text="ALPHA RECREATION - 0.030"
-				InitCommand="x,SCREEN_CENTER_X+250;y,SCREEN_CENTER_Y+90"
-				OnCommand="shadowlength,0;skewx,-0.25;zoom,0.5;zoomx,0.8;horizalign,right" />
+		<Layer Font="_krungthep 20px" Text="ALPHA RECREATION - 0.830"
+				InitCommand="x,SCREEN_CENTER_X+230;y,SCREEN_CENTER_Y+50"
+				OnCommand="shadowlength,0;skewx,-0.25;zoom,0.5;zoomx,0.8;horizalign,right;diffusealpha,0;sleep,1;diffusealpha,1" />
+
+			<Layer Font="_krungthep 20px" Text="A INITIAL G Port (2018)::In The Groove (c) RoXoR Games (2003-2006)"
+				InitCommand="x,SCREEN_RIGHT-20;y,SCREEN_BOTTOM-20"
+				OnCommand="shadowlength,0;skewx,-0.25;zoom,0.4;zoomx,0.6;horizalign,right;diffuse,0.5,0.5,0.5,0;sleep,1.4;diffusealpha,1" />
 </children></ActorFrame>
